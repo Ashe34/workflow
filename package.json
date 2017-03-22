@@ -1,0 +1,25 @@
+{
+  "name": "workflow",
+  "version": "1.0.0",
+  "description": "my web workflow with NPM, SASS, Gulp and more",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashe34/workflow.git"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Git",
+    "Glup"
+  ],
+  "author": "Ashe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ashe34/workflow/issues"
+  },
+  "homepage": "https://github.com/Ashe34/workflow#readme"
+}
