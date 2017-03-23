@@ -1,7 +1,7 @@
 {
   "name": "workflow",
   "version": "1.0.0",
-  "description": "my web workflow with NPM, SASS, Gulp amd More",
+  "description": "my web workflow with NPM, SASS, Gulp and more",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,6 +26,7 @@
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean": "^0.3.2",
     "gulp-sass": "^3.1.0"
   }
 }

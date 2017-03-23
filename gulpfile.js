@@ -27,10 +27,10 @@ gulp.task('copy', function() {
     .pipe(gulp.dest(APPPATH.root))
 });
 
-gulp.task('serve',['sass'],  function() {
-    browserSync.init([APPPATH.css + 'app/css', APPPATH.root + '/*.html', APPPATH.js + '/*.js'], {
+gulp.task('serve',['sass'], function(){
+    browserSync.init([APPPATH.css + '/*.css', APPPATH.root + '/*.html' + APPPATH.js + '/*.js'], {
         server: {
-            baseDir: APPPATH.root
+            baseDir : APPPATH.root
         }
     })
 });
