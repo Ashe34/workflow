@@ -13,6 +13,7 @@ var injectPartials = require('gulp-inject-partials');
 var minify = require('gulp-minify');
 var rename = require('gulp-rename');
 var cssmin = require('gulp-cssmin');
+var htmlmin = require('gulp-htmlmin');
 
 
 var SOURCEPATHS = {
@@ -80,7 +81,6 @@ gulp.task('compress', function(){
         .pipe(concat('main.js'))
         .pipe(browserify())
         .pipe(minify())
-        
         .pipe(gulp.dest(APPPATH.js))
 });
 
@@ -102,6 +102,13 @@ gulp.task('compresscss', function(){
 });
 
 /* End of Production Tasks */
+
+gulp.task('minifyHtml', function(){
+    return gulp.src(SOURCEPATHS.htmlSource)
+    .pipe(injectPartials())
+    .pipe(htmlmin({collapseWhitespace:true}))
+    .pipe(gulp.dest(APPPATH.root))
+});
 
 gulp.task('html', function(){
     return gulp.src(SOURCEPATHS.htmlSource)
@@ -133,3 +140,5 @@ gulp.task('serve',['sass'], function(){
 } );
 
 gulp.task('default', ['watch']);
+
+gulp.task('production',['minifyHtml','compresscss','compress' ]);
